@@ -11,6 +11,7 @@ class Prefs(context: Context) {
     private val PASS = "pass"
     private val NAME = "name"
     private val TEMA = "tema"
+    private val DEFAULT_USER = "default_user"
 
     private val APP_PREFS = "prefs"
     private val preferences: SharedPreferences = context.getSharedPreferences(APP_PREFS, Context.MODE_PRIVATE)
@@ -47,4 +48,8 @@ class Prefs(context: Context) {
     var tema: String?
         get() = preferences.getString(TEMA, "")
         set(value) = preferences.edit().putString(TEMA, value).apply()
+
+    var default_user: Boolean
+        get() = preferences.getBoolean(DEFAULT_USER, false)
+        set(value) = preferences.edit().putBoolean(DEFAULT_USER, value).apply()
 }

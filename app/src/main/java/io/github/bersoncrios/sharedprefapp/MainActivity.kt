@@ -17,12 +17,14 @@ class MainActivity : AppCompatActivity() {
         prefs.email = "bersondev@gmail.com"
         prefs.pass = 123456
         prefs.name = "Guilherme"
-        prefs.tema = TEMA.ESCURO.name
+        prefs.tema = TEMA.CLARO.name
+        prefs.default_user = true
 
         Log.d(TAG, "onCreate: ${prefs.email}")
         Log.d(TAG, "onCreate: ${prefs.pass}")
         Log.d(TAG, "onCreate: ${prefs.name}")
         Log.d(TAG, "onCreate: ${prefs.tema}")
+        Log.d(TAG, "onCreate: ${prefs.default_user}")
 
 
         if (prefs.tema!! == TEMA.ESCURO.name){
